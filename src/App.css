@@ -1,6 +1,13 @@
 body{
   padding: 40px;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.App{
+  width: 400px;
 }
 
 .row{
