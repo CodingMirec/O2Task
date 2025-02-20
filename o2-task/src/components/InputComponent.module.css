@@ -1,0 +1,130 @@
+::placeholder {
+  color: var(--color-content-on-neutral-low);
+
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: var(--color-content-on-neutral-low);
+
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.inputHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xs);
+}
+
+.inputLabelWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.inputLabel {
+  font-family: var(--font-label-family);
+  font-size: var(--font-label-m-size);
+  font-weight: var(--font-label-m-weight);
+  line-height: var(--font-label-m-line-height);
+  letter-spacing: var(--font-label-m-letter-spacing);
+  color: var(--color-content-on-neutral-xx-high);
+}
+
+.inputOptionalLabel {
+  font-family: var(--font-label-family);
+  font-size: var(--font-label-s-size);
+  font-weight: var(--font-label-s-weight);
+  line-height: var(--font-label-s-line-height);
+  letter-spacing: var(--font-label-s-letter-spacing);
+  color: var(--color-content-on-neutral-low);
+}
+
+.inputMandatory {
+  color: var(--color-content-on-neutral-danger);
+}
+
+.inputDescription {
+  font-family: var(--font-label-family);
+  font-size: var(--font-label-s-size);
+  font-weight: var(--font-label-s-weight);
+  line-height: var(--font-label-s-line-height);
+  letter-spacing: var(--font-label-s-letter-spacing);
+  color: var(--color-content-on-neutral-x-high);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.inputField {
+  flex: 1;
+  border: 1px solid var(--color-surface-x-high);
+  border-radius: var(--radius-input);
+  transition: border-color 0.3s ease;
+  background-color: var(--color-surface-x-low);
+  padding: var(--spacing-s) var(--spacing-xs) var(--spacing-s) var(--spacing-m);
+  caret-color: var(--color-surface-brand);
+
+  color: var(--color-content-on-neutral-xx-high);
+  font-family: var(--font-body-family);
+  font-size: var(--font-body-m-size);
+  font-weight: var(--font-body-m-weight);
+  line-height: var(--font-body-m-line-height);
+  letter-spacing: var(--font-body-m-letter-spacing);
+}
+
+.inputField:hover {
+  border-color: var(--color-state-default-hover);
+}
+
+.inputField:focus-within {
+  border: 3px solid var(--color-state-default-focus);
+}
+
+.inputField.error {
+  border-color: var(--color-content-on-neutral-danger);
+  /* background-color: var( --color-surface-danger-variant); */
+  outline: none;
+  padding-right: var(--spacing-xl);
+}
+
+.inputField.error:focus-within {
+  border: 2px solid var(--color-content-on-neutral-danger);
+  background-color: var(--color-surface-x-low);
+}
+
+.inputField:disabled {
+  background-color: var(--color-surface-x-low);
+  border-color: var(--color-surface-x-high);
+  color: var(--color-content-on-neutral-low);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.errorIcon {
+  margin: 14px 0;
+  position: absolute;
+  right: var(--spacing-xs);
+  width: var(--spacing-l);
+  height: var(--spacing-l);
+  fill: var(--color-content-on-neutral-danger);
+}
+
+.errorMessage {
+  color: var(--color-content-on-neutral-danger);
+  font-size: var(--font-label-s-size);
+  font-weight: var(--font-label-s-weight);
+  line-height: var(--font-label-s-line-height);
+  letter-spacing: var(--font-label-s-letter-spacing);
+}
